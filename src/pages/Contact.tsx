@@ -25,43 +25,43 @@ const Contact = () => {
 
     return (
         <PageWrapper>
-            <div className="max-w-3xl mx-auto p-6">
+            <div className="contact-outer-container">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold text-gray-800">Get in Touch</h1>
-                    <p className="text-lg text-gray-600 mt-2">
+                    <h1 className="section-title">Get in Touch</h1>
+                    <p className="about-me-text text-gray-600">
                         Send me a message directly on WhatsApp!
                     </p>
                 </div>
 
-                <div className="mt-8 bg-white p-6 rounded-xl shadow-lg">
+                <div className="contact-inner-container">
                     <div className="space-y-4">
                         <div>
-                            <label className="block text-gray-700 font-medium">Name</label>
+                            <label className="label">Name</label>
                             <input
                                 type="text"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="Your Name"
-                                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                                className="name-input"
                             />
                         </div>
 
                         <div>
-                            <label className="block text-gray-700 font-medium">Message</label>
+                            <label className="label">Message</label>
                             <textarea
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
                                 rows={4}
                                 placeholder="Your Message"
-                                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+                                className="message-input"
                             ></textarea>
                         </div>
 
                         <button
                             onClick={handleSend}
-                            className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+                            className="send-button">
                             Send via WhatsApp
                         </button>
                     </div>

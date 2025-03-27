@@ -6,6 +6,6 @@ type Props = {
 }
 export const NavItem = ({ address, title }: Props) => {
     return (
-        <Link to={address} className="ms-10 text-[17px]">{title}</Link>
+        <Link to={address} className="ms-10 text-[17px] hover:text-amber-500">{title}</Link>
     );
 }

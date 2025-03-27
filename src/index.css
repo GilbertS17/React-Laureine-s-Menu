@@ -1,1 +1,191 @@
 @import "tailwindcss";
+
+/* Navbar */
+.navbar-container {
+  @apply flex justify-between p-10;
+}
+
+.title {
+  @apply text-4xl font-bold text-gray-800 tracking-wide drop-shadow-md md:text-5xl;
+}
+
+/* Page Wrapper */
+
+.page-wrapper-container {
+  @apply p-12 bg-amber-100 flex flex-col h-auto;
+}
+
+/* Loading Component */
+
+.loading-outer-container {
+  @apply flex items-center justify-center min-h-screen bg-amber-100;
+}
+
+.loading-inner-container {
+  @apply flex flex-col items-center space-y-4;
+}
+
+.loading-text {
+  @apply text-xl font-semibold text-gray-700 tracking-wide animate-pulse;
+}
+
+.loading-icon {
+  @apply w-16 h-16 border-4 border-t-green-500 border-gray-300 rounded-full animate-spin;
+}
+
+/* Home Page */
+
+.recipes-cards-outer-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-2;
+}
+
+.recipe-card-outer-container {
+  @apply m-4 bg-white rounded-2xl shadow-2xl;
+}
+
+.recipe-card-inner-container {
+  @apply block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300;
+}
+
+.recipe-card-image {
+  @apply w-full h-64 object-cover rounded-tl-2xl rounded-tr-2xl group-hover:opacity-80 transition-opacity duration-300;
+}
+
+.recipe-card-title {
+  @apply font-semibold text-2xl text-gray-800 group-hover:text-amber-500 transition-colors duration-300;
+}
+
+.recipe-card-info {
+  @apply text-gray-600;
+}
+
+/* Recipe Page */
+
+.recipe-outer-container {
+  @apply max-w-4xl mx-auto p-4;
+}
+
+.recipe-inner-container {
+  @apply bg-white rounded-2xl shadow-lg overflow-hidden;
+}
+
+.recipe-image {
+  @apply w-full h-64 object-cover rounded-t-2xl;
+}
+
+.recipe-title {
+  @apply text-3xl font-bold text-gray-800;
+}
+
+.tags-container {
+  @apply flex flex-wrap gap-2 mt-2;
+}
+
+.tag {
+  @apply px-3 py-1 text-sm bg-blue-200 text-blue-800 rounded-full;
+}
+
+.recipe-infos {
+  @apply mt-4 grid grid-cols-2 gap-4 text-gray-600;
+}
+
+.recipe-rating {
+  @apply mt-4 flex items-center gap-2 text-yellow-500;
+}
+
+.recipe-rating-text {
+  @apply text-xl font-bold;
+}
+
+.recipe-subtitle {
+  @apply text-xl font-semibold text-gray-700;
+}
+
+.recipe-list-sub-infos {
+  @apply list-disc list-inside text-gray-600 mt-2;
+}
+
+.recipe-decimal-sub-infos {
+  @apply list-decimal list-inside text-gray-600 mt-2;
+}
+
+/* About Page */
+.about-outer-container {
+  @apply max-w-4xl mx-auto;
+}
+
+.section-title {
+  @apply text-4xl font-bold text-gray-800 mb-5;
+}
+
+.my-position {
+  @apply text-lg text-gray-600 mt-2;
+}
+
+.about-me-text-container {
+  @apply mt-8 text-gray-700 text-center;
+}
+
+.about-me-text {
+  @apply text-lg leading-relaxed;
+}
+
+.my-skills-subtitle {
+  @apply text-2xl font-semibold text-gray-800 text-center mb-6;
+}
+
+.skills-container {
+  @apply flex flex-wrap justify-center gap-3 mt-4 mb-6;
+}
+
+.skill {
+  @apply px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium shadow-md hover:animate-bounce;
+}
+
+.about-contact-me-button {
+  @apply inline-block mt-4 px-6 py-3 bg-green-500 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-600 transition;
+}
+
+/* Contact Page */
+
+.contact-outer-container {
+  @apply max-w-3xl mx-auto p-6;
+}
+
+.contact-inner-container {
+  @apply mt-8 bg-white p-6 rounded-xl shadow-lg;
+}
+
+.label {
+  @apply block text-gray-700 font-medium;
+}
+
+.name-input {
+  @apply w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400;
+}
+
+.message-input {
+  @apply w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400;
+}
+
+.send-button {
+  @apply w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition;
+}
+
+/* Not Found Page  */
+
+.not-found-outer-container {
+  @apply flex flex-col items-center text-center;
+}
+
+.not-found-logo {
+  @apply text-8xl font-extrabold text-amber-500 drop-shadow-lg;
+}
+
+.not-found-message {
+  @apply mt-4 text-xl text-gray-700;
+}
+
+.home-button {
+  @apply mt-6 px-6 py-3 text-lg font-semibold text-white bg-amber-500 rounded-lg shadow-lg hover:bg-amber-600 transition-all duration-300;
+}

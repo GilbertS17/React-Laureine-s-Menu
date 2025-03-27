@@ -2,8 +2,8 @@ import { NavItem } from "./NavItem";
 
 const Navbar = () => {
     return (
-        <div className="navbar flex justify-between p-10">
-            <h1 className="text-4xl font-bold text-gray-800 tracking-wide drop-shadow-md md:text-5xl">
+        <div className="navbar-container">
+            <h1 className="title">
                 <span className="bg-clip-text">
                     Laurene's Menu
                 </span>

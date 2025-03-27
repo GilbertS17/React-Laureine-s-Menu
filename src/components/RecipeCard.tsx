@@ -14,25 +14,21 @@ type Props = {
 
 export const RecipeCard = ({ recipes }: Props) => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-2 ">
+        <div className="recipes-cards-outer-container">
             {recipes.map((recipe) => (
-                <div key={recipe.id} className="m-4 bg-white rounded-2xl shadow-2xl">
-                    <Link to={`/recipes/${recipe.id}`} className="group block rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                        {/* Image Section */}
+                <div key={recipe.id} className="recipe-card-outer-container">
+                    <Link to={`/recipes/${recipe.id}`} className="recipe-card-inner-container group">
                         <img
                             src={recipe.image}
                             alt={recipe.name}
-                            className="w-full h-64 object-cover rounded-tl-2xl rounded-tr-2xl group-hover:opacity-80 transition-opacity duration-300"
+                            className="recipe-card-image"
                         />
-
-                        {/* Recipe Info */}
                         <div className="p-4">
-                            <h2 className="font-semibold text-2xl text-gray-800 group-hover:text-amber-500 transition-colors duration-300">{recipe.name}</h2>
-                            <p className="text-gray-600">Estimated time: {recipe.prepTimeMinutes + recipe.cookTimeMinutes} minutes</p>
-                            <p className="text-gray-600">Difficulty: {recipe.difficulty}</p>
+                            <h2 className="recipe-card-title">{recipe.name}</h2>
+                            <p className="recipe-card-info">Estimated time: {recipe.prepTimeMinutes + recipe.cookTimeMinutes} minutes</p>
+                            <p className="recipe-card-info">Difficulty: {recipe.difficulty}</p>
                         </div>
                     </Link>
-
                 </div>
             ))}
         </div>

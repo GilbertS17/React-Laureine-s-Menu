@@ -35,27 +35,26 @@ export const Recipe = () => {
 
     return (
         <PageWrapper>
-
-            <div className="max-w-3xl mx-auto p-4">
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="recipe-outer-container">
+                <div className="recipe-inner-container">
                     <img
                         src={recipe.image}
                         alt={recipe.name}
-                        className="w-full h-64 object-cover rounded-t-2xl"
+                        className="recipe-image"
                     />
 
                     <div className="p-6">
-                        <h2 className="text-3xl font-bold text-gray-800">{recipe.name}</h2>
+                        <h2 className="recipe-title">{recipe.name}</h2>
 
-                        <div className="flex flex-wrap gap-2 mt-2">
+                        <div className="tags-container">
                             {recipe.tags.map((tag) => (
-                                <span key={tag} className="px-3 py-1 text-sm bg-blue-200 text-blue-800 rounded-full">
+                                <span key={tag} className="tag">
                                     {tag}
                                 </span>
                             ))}
                         </div>
 
-                        <div className="mt-4 grid grid-cols-2 gap-4 text-gray-600">
+                        <div className="recipe-infos">
                             <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} mins</p>
                             <p><strong>Cook Time:</strong> {recipe.cookTimeMinutes} mins</p>
                             <p><strong>Total Time:</strong> {recipe.prepTimeMinutes + recipe.cookTimeMinutes} mins</p>
@@ -66,14 +65,14 @@ export const Recipe = () => {
                             <p><strong>Meal Type:</strong> {recipe.mealType.join(", ")}</p>
                         </div>
 
-                        <div className="mt-4 flex items-center gap-2 text-yellow-500">
-                            <span className="text-xl font-bold">{recipe.rating}</span>
+                        <div className="recipe-rating">
+                            <span className="recipe-rating-text">{recipe.rating}</span>
                             <span>⭐ ({recipe.reviewCount} reviews)</span>
                         </div>
 
                         <div className="mt-6">
-                            <h3 className="text-xl font-semibold text-gray-700">Ingredients</h3>
-                            <ul className="list-disc list-inside text-gray-600 mt-2">
+                            <h3 className="recipe-subtitle">Ingredients</h3>
+                            <ul className="recipe-list-sub-infos">
                                 {recipe.ingredients.map((ingredient) => (
                                     <li key={ingredient}>{ingredient}</li>
                                 ))}
@@ -81,8 +80,8 @@ export const Recipe = () => {
                         </div>
 
                         <div className="mt-6">
-                            <h3 className="text-xl font-semibold text-gray-700">Instructions</h3>
-                            <ol className="list-decimal list-inside text-gray-600 mt-2">
+                            <h3 className="recipe-subtitle">Instructions</h3>
+                            <ol className="recipe-decimal-sub-infos">
                                 {recipe.instructions.map((step, index) => (
                                     <li key={index}>{step}</li>
                                 ))}
