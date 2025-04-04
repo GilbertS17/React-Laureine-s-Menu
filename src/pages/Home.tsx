@@ -32,13 +32,13 @@ const Home = () => {
         const query = event.target.value.trim();
 
         if (query === "") {
-            setRecipes(allRecipes); // Reset to full list when input is empty
+            setRecipes(allRecipes);
             return;
         }
 
         fetch(`https://dummyjson.com/recipes/search?q=${query}`)
             .then(res => res.json())
-            .then(data => setRecipes(data.recipes)); // Update state with search results
+            .then(data => setRecipes(data.recipes));
     }
     return (
         <PageWrapper>
