@@ -28,7 +28,7 @@ export const Recipe = () => {
     useEffect(() => {
         fetch(`https://dummyjson.com/recipes/${id}`)
             .then((res) => res.json())
-            .then((data) => setRecipe(data));
+            .then((data) => setRecipe(data))
     }, [id]);
 
     if (!recipe) return <Loading />;
