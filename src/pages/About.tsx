@@ -1,8 +1,5 @@
-import { PageWrapper } from "../components/PageWrapper";
-
 const About = () => {
     return (
-        <PageWrapper>
             <div className="about-outer-container">
                 <div className="text-center">
                     <h1 className="section-title">About Me</h1>
@@ -45,7 +42,6 @@ const About = () => {
                     </a>
                 </div>
             </div>
-        </PageWrapper>
     );
 };
 

@@ -1,10 +1,9 @@
-type Props = {
-    children: React.ReactNode;
-}
-export const PageWrapper = ({ children }: Props) => {
+import { Outlet } from 'react-router-dom';
+
+export const PageWrapper = () => {
     return (
         <div className="page-wrapper-container">
-            {children}
+            <Outlet />
         </div>
     );
 }

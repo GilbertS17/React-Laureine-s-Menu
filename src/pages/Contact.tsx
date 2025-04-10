@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PageWrapper } from "../components/PageWrapper";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -24,7 +23,6 @@ const Contact = () => {
     };
 
     return (
-        <PageWrapper>
             <div className="contact-outer-container">
                 <div className="text-center">
                     <h1 className="section-title">Get in Touch</h1>
@@ -67,7 +65,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </PageWrapper>
     );
 };
 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { PageWrapper } from "../components/PageWrapper"
 import { RecipeCard } from "../components/RecipeCard";
 import Loading from "../components/Loading";
 import SearchInput from "../components/SearchInput";
@@ -41,11 +40,11 @@ const Home = () => {
             .then(data => setRecipes(data.recipes));
     }
     return (
-        <PageWrapper>
+        <div>
             <SearchInput searchHandler={searchHandler} />
             {isPending && <Loading />}
             {recipes.length > 0 && <RecipeCard recipes={recipes} />}
-        </PageWrapper>
+        </div>
     );
 }
 
